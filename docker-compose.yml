@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  wordle:
+    image: wordle
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/app
+    command: python wordle.py
